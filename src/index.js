@@ -7,6 +7,7 @@ import api from './api';
 import "./index.css";
 
 const main = function() {
+
   api.getItems()
   .then(res => res.json())
   .then((items) => {
@@ -29,6 +30,7 @@ const main = function() {
   api.getItems()
     .then(res => res.json())
     .then(res => console.log(res));
+    
 };
 
 $(main);

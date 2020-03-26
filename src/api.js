@@ -18,7 +18,20 @@ function createItem(name) {
   return fetch(`${BASE_URL}/items`, secondArg);
 };
 
+function updateItem(id, updateData) {
+  const newData = JSON.stringify(updateData);
+
+  let secondArg = {
+    method: 'PATCH', 
+    headers: {'Content-Type': 'application/json'},
+    body: newData
+  }
+
+  return fetch(`${BASE_URL}/items/${id}`, secondArg);
+}
+
 export default {
   getItems,
-  createItem
+  createItem,
+  updateItem
 };
