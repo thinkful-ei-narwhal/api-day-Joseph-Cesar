@@ -10,6 +10,7 @@ const main = function() {
   shoppingList.bindEventListeners();
   shoppingList.render();
   api.getItems()
+    .then(res => res.json())
     .then(res => console.log(res));
 };
 
