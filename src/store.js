@@ -8,6 +8,8 @@ function findById(id) {
 }
 
 function addItem(itemName) {
+  //might need to delete bottom line later
+  item.validateName(itemName);
   this.items.push(itemName);
 }
 
