@@ -28,8 +28,18 @@ function updateItem(id, updateData) {
   return fetch(`${BASE_URL}/items/${id}`, secondArg);
 }
 
+function deleteItem(id) {
+  let secondArg = {
+    method: 'DELETE', 
+    headers: {'Content-Type': 'application/json'},
+  }
+
+  return fetch(`${BASE_URL}/items/${id}`, secondArg);
+}
+
 export default {
   getItems,
   createItem,
-  updateItem
+  updateItem,
+  deleteItem
 };
