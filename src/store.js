@@ -16,10 +16,7 @@ function findAndUpdate(id,newData){
   //console.log(name.id)
   const foundData =this.items.find(name=> name.id===id);
   Object.assign(foundData,newData);
-  
-
 }
-
 
 function findAndDelete(id) {
   this.items = this.items.filter(item => item.id !== id);

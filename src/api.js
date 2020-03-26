@@ -5,9 +5,7 @@ function getItems() {
 };
 
 function createItem(name) {
-  const newItem = JSON.stringify({
-    name,
-  });
+  const newItem = JSON.stringify({ name });
 
   let secondArg = {
     method: 'POST', 
