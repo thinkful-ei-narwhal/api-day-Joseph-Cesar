@@ -5,13 +5,14 @@ function getItems() {
 };
 
 function createItem(name) {
-  const newItem = {
+  const newItem = JSON.stringify({
     name,
-  }
+  });
+
   let secondArg = {
     method: 'POST', 
     headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify(newItem) 
+    body: newItem
   }
 
   return fetch(`${BASE_URL}/items`, secondArg);

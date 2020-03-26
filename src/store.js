@@ -8,12 +8,7 @@ function findById(id) {
 }
 
 function addItem(itemName) {
-  try {
-    item.validateName(itemName);
-    this.items.push(item.create(itemName));
-  } catch (error) {
-    console.log(`Cannot add item: ${error.message}`);
-  }
+  this.items.push(itemName);
 }
 
 function findAndToggleChecked(id) {
